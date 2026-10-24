@@ -1,4 +1,4 @@
-# SPEC — [Nombre del producto]
+# SPEC — [Aprendamos]
 
 > **Qué es este documento:** tu versión refinada de la SPEC de clase.
 > El repo empieza con la SPEC de clase **tal cual** (primer commit). Este archivo es su evolución:
@@ -11,7 +11,7 @@
 ## 1. Identidad del producto
 
 - **Nombre propio:** Aprendamos
-- **Una línea:** Es una webapp dirijida a toda la comunidad que desee formarse. Fue pensada por un grupo de estudiantes para subir en un mismo lugar un conjunto de cursos gratuitos que permiten gestionar el aprendizaje de cada persona a través de roadmaps
+- **Una línea:** Es una webapp dirigida a toda la comunidad que desee formarse. Fue pensada por un grupo de estudiantes para subir en un mismo lugar un conjunto de cursos gratuitos que permiten gestionar el aprendizaje de cada persona a través de roadmaps
 
 ## 2. Problema
 
@@ -21,7 +21,7 @@ Por ello, Aprendamos nace como idea de la comunidad de alumnos que ve en esto un
 
 ## 3. Visión
 
-En el próximo año, Aprendamos será un espacio de formación estudiantil de referencia, será unos de los principales sitios donde una persona buscará los cursos existentes de la materia de la cual desea ahondar conocimientos. 
+En el próximo año, Aprendamos será un espacio de formación estudiantil de referencia, será un espacio donde estén disponibles los principales cursos existentes de la materia de la cual desea ahondar conocimientos. 
 
 ## 4. Alcance
 
@@ -31,7 +31,7 @@ En el próximo año, Aprendamos será un espacio de formación estudiantil de re
 
 - Protección del inicio de sesión mediante rate limiting.
 
--Almacenamiento de contraseñas mediante SHA-256 con sal como mínimo, o un algoritmo más fuerte justificado en el TRD.
+- Almacenamiento de contraseñas mediante bcrypt como mínimo, o un algoritmo más fuerte justificado en el TRD.
 
 -Aporte de cursos gratuitos de cualquier plataforma o proveedor, con enlace web activo y los campos mínimos establecidos en la SPEC original.
 
@@ -65,10 +65,10 @@ En el próximo año, Aprendamos será un espacio de formación estudiantil de re
 | # | Regla | Origen |
 |---|-------|--------|
 | BR-001 | Los cursos aportados deben validarse antes de incorporarse al catálogo comunitario | SPEC clase |
-| BR-002 | Cada usuario ve y edita solo su propio roadmap | decisión propia |
-| BR-003 | Quien aporta un curso declara si él/ella lo tomó | SPEC clase |
+| BR-002 | Cada usuario puede gestionar su propio roadmap personal | SPEC clase |
+| BR-003 | Quien aporta un curso declara si lo tomó | SPEC clase |
 | BR-004 | Los cursos aportados deben ser gratuitos y contar con un enlace web activo | SPEC clase |
-| BR-005 | El acceso a las funcionalidades de usuario requiere una cuenta y autentición | SPEC clase.
+| BR-005 | Para gestionar el roadmap personal, aportar cursos y acceder a las funciones de la cuenta, el usuario debe autenticarse | decisión propia.
 |BR-006 | El catálogo podra consultarse sin iniciar sesión |  decisión propia.
 
 > El detalle completo de reglas vive en el PRD §7. Acá van las 3 a 5 que definen el carácter del producto.
@@ -107,8 +107,8 @@ Las versiones exactar instaladas se verificarán y documentarán en el TRD antes
 |---|----------------------------|-----------------------|----------|---------------------|
 | 1 | [ ¿quién valida los cursos aportados?] | [Validación por adminstrador o validación comunitaria] | [Un administrador revisa los cursos aportados y decide si se incoporan al catálogo comunitario] [PRD: reglas de negocio y permisos / TRD: implementacion de roles y validación] |
 | 2 | [¿hay roles?] |Todos los usuarios con los mismos permisos o usuarios con permisos diferentes | Se definen dos roles: usuario y administrador. El adminsitrador tiene permisos adicionales para validad cursos |PRD: permisos por rol. TDR: Autorizacion y modelo de datos |
-| 3 | [¿qué es exactamente "incluir en mi catálogo o roadmap personal"?] | Incoporarlo a una coleccion personal o a una secuencia ordenada de aprendizaje | Pendiente definir | PRD Y APPFlow. |
-| 4 | [¿la búsqueda es por texto, filtro, o ambos?] | Busqueda por texto, filtros, o ambas | Pendiente definir | PRD Y UX-UI.md |
+| 3 | [¿qué es exactamente "incluir en mi catálogo o roadmap personal"?] | Incoporarlo a una coleccion personal o a una secuencia ordenada de aprendizaje | El usuario puede incorporar un curso validado a su roadmap personal y ordenar los cursos según su secuencia de aprendizaje | PRD Y APPFlow. |
+| 4 | [¿la búsqueda es por texto, filtro, o ambos?] | Busqueda por texto, filtros, o ambas | Ambas | PRD Y UX-UI.md |
 | 5 | ¿Como se recupera la contraseña? | Recuperacion mediante enlance o token temporal | Se implementará en el ciclo completo exigido por la SPEC de clase: solicitud, enlace/token y nueva contraseña | PRD Y TDR |
 
 ## 9. Historia de la SPEC (autoregistro de cambios)
