@@ -1,4 +1,4 @@
-# [Nombre del producto]
+# Aprendamos
 
 > WebApp de gestión de comunidad de cursos: catálogo comunitario de cursos gratuitos
 > + roadmaps personales de aprendizaje.
@@ -11,9 +11,7 @@
 
 ## Qué hace
 
-[3 a 5 líneas: para quién es, qué problema resuelve y el flujo principal —
-ej. "cualquier persona puede aportar un curso gratuito de cualquier plataforma; tras validación
-entra al catálogo comunitario; desde ahí, cada usuario arma su roadmap personal de aprendizaje".]
+Aprendamos permite consultar un catálogo comunitario de cursos gratuitos aportados por usuarios y validados antes de su publicación. Los usuarios pueden aportar información sobre cursos para que un administrador la revise y decida si se publica. Además, cada usuario puede organizar los cursos publicados en un roadmap personal y registrar su progreso de aprendizaje.
 
 ## Documentación
 
@@ -38,15 +36,14 @@ entra al catálogo comunitario; desde ahí, cada usuario arma su roadmap persona
 
 | Instancia | Contenido | Estado |
 |-----------|-----------|--------|
-| A — Documentación | repo + 7 documentos | ✅ enviada a aprobación el [fecha] |
+| A — Documentación | repo + 7 documentos | ✅ enviada a aprobación el 24/10/2026 |
 | B — Desarrollo del MVP | ejecución del Implementation Plan | ⏳ pendiente de aprobación |
 | C — Clase 27/10 | testing, Docker multi-stage, gestión del cambio | ⏳ |
 
 ## Versionado
 
-- **Flujo de Git:** [tu flujo elegido — 2 a 5 líneas: qué ramas existen, cómo se mergea,
-  qué convención de commits se usa. Detalle en el TRD §4 o en un `docs/GIT_WORKFLOW.md`.]
-- **Convención de commits:** Conventional Commits (`feat:`, `fix:`, `docs:`, `test:`, `docker:`, `chore:`)
+- **Flujo de Git:** se utiliza la rama docs/documentacion-inicial para trabajar en la documentación de la Instancia A, manteniendo los cambios separados de main. La integración se realizará siguiendo el flujo documentado del proyecto.
+- **Convención de commits:** se adopta Conventional Commits, utilizando mensajes específicos que identifiquen el tipo de cambio. Para la documentación se emplea el prefijo `docs:`, por ejemplo, `docs: actualizar README del proyecto`.
 
 ---
 
