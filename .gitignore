@@ -1,0 +1,30 @@
+Frontend: Node, Vite y pnpm
+
+node_modules/
+dist/
+.vite/
+
+Backend: Python y uv
+
+pycache/
+*.py[cod]
+.venv/
+venv/
+.python-version
+
+Variables de entorno y secretos
+
+.env
+.env.*
+!.env.example
+
+Editores y sistema operativo
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+Logs
+
+*.log
