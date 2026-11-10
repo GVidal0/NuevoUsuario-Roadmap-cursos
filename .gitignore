@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+.venv/
+
+# Node.js
+node_modules/
+dist/
+
+# Entorno
+.env
+!.env.example
